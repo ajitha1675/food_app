@@ -163,7 +163,7 @@ function changeAnimationSpeed(i){
        </div>
        <div className="section d-block">
                 <h2>Animation speed</h2>
-                <div className="options-container">
+                <div className="option-container">
                     { animationSpeeds.map((speed, index) => (
                         <button className="btn" onClick={() => changeAnimationSpeed(index)}>
                             {speed.title}
