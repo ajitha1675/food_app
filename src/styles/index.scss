@@ -69,11 +69,13 @@ img{
 .section{
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 3vw;
   align-items: center;
   .title{
     color: var(--text-color);
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: .25em;
+    font-weight: 900;
   }
   .info{
     color: var(--text-light);
@@ -87,13 +89,42 @@ img{
   }
 }
 
-@import "partials/hero_section";
+@import "partials/hero_section.scss";
+
+.section.improve-skills{
+  .col.img{
+    img{
+      width: 100%;
+    }
+  }
+  .col.typography{
+    padding-left: 1em;
+     .skill-item{
+      border-left: .2em solid var(--primary-color);
+      margin-bottom: .5em;
+      padding: .1em 0 .1em .5em;
+      color: var(--text-light);
+      font-weight: bold;
+      transform: translateX(100%);
+      opacity: 0;
+      animation: getAnimationDuration(.3s) slideInRight forwards;
+      @for $i from 2 through 6 {
+          &:nth-child(#{$i}){
+              animation-delay: #{$i * .1}s;
+          }
+      }
+     }
+     .btn{
+      margin-top: .75em;
+     }
+  }
+}
 
 .main{
   padding-block: 3vw;
 }
 .container{
-  padding-inline: 15vw;
+  padding-inline: 12vw;
   
 }
 
