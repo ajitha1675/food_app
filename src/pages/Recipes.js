@@ -1,5 +1,5 @@
 import PreviousSearches from "../components/PreviousSearches"
-import RecipeCard from "../components/RecipeCard"
+import RecipesCard from "../components/RecipesCard"
 
 export default function Recipes(){
     const recipes = [
@@ -71,7 +71,7 @@ export default function Recipes(){
             <div className="recipes-container">
                 {/* <RecipeCard /> */}
                 {recipes.map((recipe, index) => (
-                    <RecipeCard key={index} recipe={recipe} />
+                    <RecipesCard key={index} recipe={recipe} />
                 ))}
             </div>
         </div>
